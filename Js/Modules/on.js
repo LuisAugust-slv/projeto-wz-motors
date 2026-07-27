@@ -1,6 +1,6 @@
 import { isMobile } from "../utils/viewport.js";
 
-export function initSobre() {
+export function initOn() {
     if (!isMobile()) return;
 
     const onText = document.querySelector("#on .on-text");

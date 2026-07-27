@@ -3,7 +3,7 @@ import { initHome } from "./Modules/home.js";
 import { initBenefits } from "./Modules/benefits.js";
 import { initBrands } from "./Modules/brands.js";
 import { initVehicles } from "./Modules/vehicles.js";
-import { initSobre } from "./Modules/sobre.js";
+import { initOn } from "./Modules/on.js";
 import { initTestimonials } from "./Modules/testimonials.js";
 import { initFooter } from "./Modules/footer.js";
 
@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-        initSobre();
+        initOn();
     } catch (e) {
-        console.error("Erro no Sobre:", e);
+        console.error("Erro no On:", e);
     }
 
     try {
