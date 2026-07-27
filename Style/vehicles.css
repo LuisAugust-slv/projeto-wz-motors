@@ -7,8 +7,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 28px var(--space-xl);
-    gap: var(--space-sm);
+    padding: 28px var(--space-xl) 32px;
 }
 
 .vehicles-header {
@@ -70,7 +69,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .quick-filters.disabled {
@@ -90,11 +89,6 @@
     font-weight: 500;
     cursor: pointer;
     transition: all 0.25s ease;
-}
-
-.quick-chip:hover {
-    background: #dcdcdc;
-    transform: translateY(-2px);
 }
 
 .quick-chip.active {
@@ -180,7 +174,7 @@
     display: flex;
     flex-direction: row;
     gap: var(--space-xs);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     padding: 8px;
     border-radius: 8px;
     background-color: #fafafa;
@@ -240,11 +234,6 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-price:hover {
-    transform: translateY(-1px);
-    background-color: #cacaca;    
-}
-
 .btn-price.active {
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -269,8 +258,8 @@
 }
 
 .select-color {
-    width: var(--space-md);
-    height: var(--space-md);
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 2px solid #ddd;
     cursor: pointer;
@@ -284,7 +273,7 @@
 
 /* Busca pelo ano: */
 .year-option {
-    width: 100%;
+    width: 99%;
     padding: 10px 12px;
     border-radius: 6px;
     border: 1px solid #ddd;
@@ -305,6 +294,7 @@
 
 /* Style checkbox: */
 .check-item {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -316,6 +306,12 @@
 }
 
 .check-item span {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 6px 12px;
     border-radius: 6px;
     border: 1px solid #ddd;
@@ -347,12 +343,20 @@
     gap: var(--space-sm);
 }
 
+.model-options label {
+    width: 30%;
+}
+
 /* Busca pela conservação: */
 .condition-options {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-sm);
+}
+
+.condition-options label {
+    width: 30%;
 }
 
 
@@ -363,56 +367,44 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    gap: 12px;
     margin-top: 10px;
 }
 
 .btn-reset {
-    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 22px;
     margin-top: auto;
-    border-radius: 6px;
-    background-color: #f8f9fa;
+
     border: 1px solid var(--primary-color);
+    border-radius: 6px;
+
+    background-color: #f8f9fa;
     color: var(--primary-color);
+
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-decoration: none;
+
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        transform .2s ease,
+        box-shadow .25s ease;
 }
 
-.btn-reset:hover {
-    background-color: var(--primary-color);
-    color: var(--white-color);
+.btn-reset i {
+    font-size: 0.9rem;
+    transition: transform .25s ease;
 }
 
 .btn-reset:active {
-    transform: scale(0.97);
-}
-
-.btn-close-filter {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-
-    padding: 8px 20px;
-    margin-top: auto;
-    border-radius: 6px;
-    background-color: #f8f9fa;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    font-size: 0.75rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.25s ease;
-}
-
-.btn-close-filter:hover {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-}
-
-.btn-close-filter:active {
-    transform: scale(0.97);
+    transform: scale(.97);
 }
 
 
@@ -421,13 +413,20 @@
 ================================================== */
 .results-counter {
     width: fit-content;
-    margin-top: var(--space-xs);
+    margin-top: -26px;
     font-size: .9rem;
     color: #666;
     cursor: default;
+    transition: margin-top .3s ease;
 }
 
-.results-counter strong {
+.results-counter.filter-open {
+    margin-top: 8px;
+}
+
+#visible-count,
+#total-count {
+    font-weight: 600;
     color: var(--primary-color);
 }
 
@@ -463,13 +462,13 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: all 0.25s ease;
     cursor: pointer;
-    content-visibility: auto;
-
+    
+    
     opacity: 0;
     transform: translateY(25px) scale(.98);
 
     animation:
-        showCard .5s ease forwards;
+        showCard .5s ease forwards; 
 }
 
 .vehicle-card:hover {
@@ -497,22 +496,19 @@
     will-change: transform;
 }
 
-.vehicle-card:hover img {
-    transform: scale(1.05);
-}
-
 .vehicle-condition {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.97);
     color: #333;
     font-weight: 500;
     font-size: 0.7rem;
     padding: 4px 10px;
     border-radius: 0 0 26px 0;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
 
 .vehicle-content {
     padding: 16px;
@@ -580,42 +576,43 @@
     box-shadow: var(--shadow-btn);
 }
 
-.vehicle-card-btn:hover {
-    background-color: #d97706;
-    box-shadow: var(--shadow-btn);
-}
-
 
 /* ==================================================
    ESTADOS DA LISTAGEM
 ================================================== */
 .empty-state {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    margin: 40px auto;
-    text-align: center;
 }
 
 .empty-state:not([hidden]) {
+    width: 100%;
+    max-width: 520px;
+
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 22px 20px;    
+    margin: -6px auto;
+    text-align: center;
+
+    background: #fcfcfc;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.empty-state i {
-    font-size: 3rem;
-    opacity: .4;
-}
-
-.empty-state h3 {
-    font-size: 1.3rem;
+.empty-state h3 {    
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .empty-state p {
-    max-width: 400px;
+    font-size: clamp(.9rem, 1vw, 1rem);
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
 }
 
 
@@ -647,13 +644,6 @@
     box-shadow: var(--shadow-btn);
 }
 
-.vehicle-action-btn:hover {
-    background-color: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-btn);
-}
-
 
 /* ==================================================
    ANIMAÇÕES
@@ -674,23 +664,179 @@
 /* ==================================================
    RESPONSIVIDADE
 ================================================== */
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
+
+}
+
+/* ==================================================
+   RESPONSIVIDADE - MOBILE
+================================================== */
+@media (max-width: 768px) {
+
+    #vehicles {
+        padding: 60px 0;
+    }
+
+    /* CABEÇALHO */
+    .vehicles-header {
+        width: 100%;
+    }
+
+    .vehicles-title-subtitle p {
+        width: 80%;
+        margin: 8px 0;
+    }
+
+    .quick-chip {
+        padding: 10px 20px;
+    }
+
+    .filter-options {
+        width: 90%;        
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+
+        overflow-anchor: none;
+    }
+
+    .filter-options.open {
+        max-height: 1200px;
+        opacity: 1;
+        transform: translateY(0);
+        margin-top: -40px;
+    }
+
+    /* Busca pelo nome: */
+    .search-name {
+        padding: 10px 14px;
+    }
+
+    /* Busca pela marca: */
+    .brand-options {
+        max-height: 100%;
+        gap: 20px;    
+    }
+
+    .check-item span {
+        padding: 8px 12px;
+    }
+
+    /* Ações (Limpar e Fechar o Filtro): */
+    .filter-actions-bottom {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }  
+    
+    .btn-reset {
+        padding: 12px 22px;
+    }
+
+    /* Listagem dos veículos: */
+    .vehicles-wrapper {
+        margin-top: 30px;
+    }
+
     .vehicle-grid {
-        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        margin: 0 16px;
     }
 
-}
-
-@media (max-width: 640px) {
-    .vehicle-grid {
-        grid-template-columns: 1fr;
+    .vehicle-image {
+        padding: 0;
     }
 
-}
+    .vehicle-image img {
+        width: 80%;
+        height: 80%;
+    }
 
-@media (max-width:768px){
-    .filter-options{
-        grid-template-columns:1fr;
+    .results-counter.filter-open {
+        margin-top: 20px;
+    }
+
+    .vehicle-content {
+        padding: 12px;
+        gap: 0;
+    }
+
+    .vehicle-title {
+        margin-bottom: 4px;
+        word-spacing: 0.15em;
+    }
+
+    .vehicle-description {
+        margin-bottom: 2px;
+        word-spacing: 0.1em;
+    }
+
+    .vehicle-info {
+        margin-bottom: 4px;
+    }
+
+    .vehicle-info i {
+        font-size: 12px;
+    }
+
+    .vehicle-info-item {
+        gap: 4px;
+    }
+
+    .vehicle-price {
+        margin-bottom: 6px;        
+    }
+
+    .vehicle-card-btn {
+        padding: 12px;
+        word-spacing: 0.2em;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }   
+    
+    .empty-state:not([hidden]) {
+        width: 90%;
     }
 }
 
+/* ==================================================
+   ACESSIBILIDADE
+================================================== */
+@media (hover: hover) {
+    .quick-chip:hover {
+        background: #dcdcdc;
+        transform: translateY(-2px);
+    }
+
+    .btn-price:hover {
+        transform: translateY(-1px);
+        background-color: #cacaca;    
+    }
+
+    .btn-reset:hover {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        box-shadow: var(--shadow-btn);
+    }
+
+    .vehicle-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .vehicle-card-btn:hover {
+        background-color: #d97706;
+        box-shadow: var(--shadow-btn);
+    }
+
+    .vehicle-action-btn:hover {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-btn);
+    }
+}

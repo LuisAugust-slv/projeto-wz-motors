@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/main.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
@@ -14,547 +14,664 @@
 </head>
 
 <body>
-    <header>
-        <div class="container-header">
-            <img src="assets/logo2.webp" class="img-logo-header" alt="Logo da WZ Motors" />
-            <nav>
-                <a href="#home" class="active">Home</a>
-                <a href="#differences">Diferenciais</a>
-                <a href="#vehicles">Veículos</a>
-                <a href="#testimonials">Depoimentos</a>
-                <a href="#on">Sobre</a>
-                <a href="#footer">Contatos</a>
-            </nav>
-        </div>
-    </header>
+    <main>
+        <header>
+            <div class="container-header">
+                <img src="assets/company-logo/logo2.webp" class="img-logo-header" alt="Logo da WZ Motors" />
+                <nav id="menu">
+                    <a id="option_home" href="#home" class="active">Home</a>
+                    <a id="option_difer" href="#differences">Diferenciais</a>
+                    <a id="option_vehicles" href="#vehicles">Veículos</a>
+                    <a id="option_testi" href="#testimonials">Depoimentos</a>
+                    <a id="option_on" href="#on">Sobre</a>
+                    <a id="option_footer" href="#footer">Contatos</a>
+                </nav>
 
-    <section id="home">
-        <div class="container-left">
-            <h1>Encontre o carro <span class="highlight">ideal</span> com condições exclusivas na WZ Motors</h1>
-            <p>Compare, escolha e saia com seu carro aprovado ainda hoje. Confira nossas vantagens e descubra por que
-                somos uma escolha certa.
-            </p>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false"
+                    aria-controls="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
 
-            <a href="#vehicles" class="btn-cta">Ver carros disponíveis agora</a>
-        </div>
-
-        <div class="container-right">
-            <img src="assets/car-home.webp" class="img-car-home" alt="Imagem carro Mercedes-Benz" />
-        </div>
-    </section>
-
-    <section id="differences">
-        <div class="container-difer">
-            <h2>Veja por que nossos clientes escolhem a WZ Motors</h2>
-            <p>Ao comprar seu veículo conosco, você garante benefícios exclusivos:</p>
-        </div>
-
-        <ul class="container-benefits">
-            <li>
-                <a href="https://wa.me/5534984413141?text=Olá!%20Estou%20interessado%20em%20comprar%20um%20veículo%20na%20WZ%20Motors%20e%20gostaria%20de%20saber%20como%20funciona%20o%20desconto%20exclusivo%20no%20seguro.%20Podem%20me%20passar%20mais%20informações?"
-                    class="benefits hidden" target="_blank" rel="noopener noreferrer">
-                    <div class="cont-benefits">
-                        <h3>Proteja seu carro com economia</h3>
-                        <p>Desconto exclusivo com seguradora parceira.</p>
-                    </div>
-
-                    <span class="cta-card-benefits">
-                        Quero meu desconto no seguro
-                    </span>
-
-                    <div class="img-wrapper">
-                        <img src="assets/benefits1.webp" alt="Cliente contratando seguro com desconto"
-                            class="img-benefits" loading="lazy" />
-
-                        <div class="badge badge-1">
-                            <strong class="highlight-number">15% OFF</strong> no seguro
-                        </div>
-
-                        <div class="badge badge-2">
-                            <strong class="highlight">Sem burocracia</strong> e aprovação rápida
-                        </div>
-                    </div>
-
-                </a>
-            </li>
-            <li>
-                <a href="https://wa.me/5534984413141?text=Olá!%20Estou%20procurando%20um%20veículo%20e%20gostaria%20de%20simular%20as%20condições%20de%20pagamento%20disponíveis.%20Podem%20me%20ajudar?"
-                    class="benefits hidden" target="_blank" rel="noopener noreferrer">
-                    <div class="cont-benefits">
-                        <h3>Condições especiais no pagamento</h3>
-                        <p>Facilidade para pagar do seu jeito.</p>
-                    </div>
-
-                    <span class="cta-card-benefits">
-                        Quero simular pagamento
-                    </span>
-
-                    <div class="img-wrapper">
-                        <img src="assets/benefits2.webp" alt="Opções de pagamento facilitado para compra de veículos"
-                            class="img-benefits" loading="lazy" />
-
-                        <div class="badge badge-1">
-                            <strong class="highlight-number">20% OFF</strong> nas parcelas
-                        </div>
-
-                        <div class="badge badge-2">
-                            <strong class="highlight">Planos flexíveis</strong> para você
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://wa.me/5534984413141?text=Olá!%20Tenho%20interesse%20em%20comprar%20um%20veículo%20na%20WZ%20Motors%20e%20gostaria%20de%20conhecer%20melhor%20os%20benefícios%20e%20o%20suporte%20oferecido%20após%20a%20compra."
-                    class="benefits hidden" target="_blank" rel="noopener noreferrer">
-                    <div class="cont-benefits">
-                        <h3>Compre com mais tranquilidade</h3>
-                        <p>Você não fica sozinho após a compra.</p>
-                    </div>
-
-                    <span class="cta-card-benefits">
-                        Quero comprar com segurança
-                    </span>
-
-                    <div class="img-wrapper">
-                        <img src="assets/benefits3.webp" alt="Atendimento e suporte técnico ao cliente após a compra"
-                            class="img-benefits" loading="lazy" />
-
-                        <div class="badge badge-1">
-                            <strong class="highlight">Suporte completo</strong> garantido
-                        </div>
-
-                        <div class="badge badge-2">
-                            <strong class="highlight-number">6</strong> <strong class="highlight">meses grátis</strong>
-                            de assistência
-                        </div>
-                    </div>
-                </a>
-            </li>
-        </ul>
-        <a href="#vehicles" class="btn-cta">Encontrar meu carro ideal</a>
-    </section>
-
-    <section id="vehicles" aria-labelledby="vehicles-title">
-
-        <!-- Cabeçalho -->
-        <div class="vehicles-header">
-            <div class="vehicles-title-subtitle">
-                <h2 class="vehicles-title">
-                    Agora que você já conhece os benefícios, veja alguns modelos disponíveis
-                </h2>
-
-                <p>
-                    Escolha o modelo ideal para o seu perfil e fale com um especialista.
+        <section id="home">
+            <div class="container-left">
+                <h1>Encontre o carro <span class="highlight">ideal</span> com condições exclusivas na WZ Motors</h1>
+                <p>Compare, escolha e saia com seu carro aprovado ainda hoje. Confira nossas vantagens e descubra por
+                    que
+                    somos uma escolha certa.
                 </p>
+
+                <a href="#vehicles" class="btn-cta">Encontrar meu carro</a>
             </div>
 
-            <!-- Botão abrir filtros -->
-            <button class="btn-filter" id="button-filter" aria-expanded="false" aria-controls="filters">
-                <span>
-                    <i class="fa-solid fa-filter"></i>
-                    Filtros
-                </span>
-                <i class="fa-solid fa-angle-up" id="icon-filters" aria-hidden="true"></i>
-            </button>
-
-            <!-- Quick Filters: são atalhos. -->
-            <div class="quick-filters" aria-label="Filtros rápidos">
-                <button class="quick-chip" data-type="modelo" data-filter="SUV" type="button">SUVs</button>
-                <button class="quick-chip" data-type="conservacao" data-filter="Seminovo"
-                    type="button">Seminovos</button>
-                <button class="quick-chip" data-type="preco" data-filter="40000" type="button">Até 40 mil</button>
-                <button class="quick-chip" data-type="modelo" data-filter="Hatch" type="button">Hatch</button>
+            <div class="container-right">
+                <img src="assets/home/car-home.webp" class="img-car-home" alt="Imagem carro Mercedes-Benz" />
             </div>
+        </section>
 
-            <!-- Painel de filtros -->
-            <div class="filter-options" id="filters" aria-hidden="true">
+        <section id="brands" aria-label="Marcas de veículos">
+            <div class="brands-carousel">
+                <h3 class="brands-title">Escolha sua marca favorita</h3>
+                <div class="brands-wrapper">
 
-                <!-- Buscar -->
-                <div class="filter-group">
-                    <p>Buscar veículo:</p>
-                    <input class="search-name" type="text" placeholder="Digite o nome do veículo..." />
+                    <div class="brands-slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
+                        <a href="#vehicles" class="brand-card" data-brand="bmw" aria-label="Filtrar veículos BMW">
+                            <img src="assets/list-brands/bmw.svg" alt="Logo da BMW" loading="lazy" draggable="false">
+                        </a>
+
+                        <a href="#vehicles" class="brand-card" data-brand="honda" aria-label="Filtrar veículos Honda">
+                            <img src="assets/list-brands/honda.svg" alt="Logo da Honda" loading="lazy"
+                                draggable="false">
+                        </a>
+
+                        <a href="#vehicles" class="brand-card" data-brand="audi" aria-label="Filtrar veículos Audi">
+                            <img src="assets/list-brands/audi.svg" alt="Logo da Audi" loading="lazy" draggable="false">
+                        </a>
+
+                        <a href="#vehicles" class="brand-card" data-brand="mercedes"
+                            aria-label="Filtrar veículos Mercedes">
+                            <img src="assets/list-brands/mercedes.svg" alt="Logo da Mercedes" loading="lazy"
+                                draggable="false">
+                        </a>
+                    </div>
+
+                    <div class="brands-slide" role="group" aria-roledescription="slide" aria-label="2 de 3">
+                        <a href="#vehicles" class="brand-card" data-brand="chevrolet"
+                            aria-label="Filtrar veículos Chevrolet">
+                            <img src="assets/list-brands/chevrolet.svg" alt="Logo da Chevrolet" loading="lazy"
+                                draggable="false">
+                        </a>
+
+                        <a href="#vehicles" class="brand-card" data-brand="volkswagen"
+                            aria-label="Filtrar veículos Volkswagen">
+                            <img src="assets/list-brands/volkswagen.svg" alt="Logo da Volkswagen" loading="lazy"
+                                draggable="false">
+                        </a>
+
+                        <a href="#vehicles" class="brand-card" data-brand="toyota" aria-label="Filtrar veículos Toyota">
+                            <img src="assets/list-brands/toyota.svg" alt="Logo da Toyota" loading="lazy"
+                                draggable="false">
+                        </a>
+
+                        <a href="#vehicles" class="brand-card" data-brand="kia" aria-label="Filtrar veículos KIA">
+                            <img src="assets/list-brands/kia.svg" alt="Logo da KIA" loading="lazy" draggable="false">
+                        </a>
+                    </div>
+
+                    <div class="brands-slide" role="group" aria-roledescription="slide" aria-label="3 de 3">
+                        <a href="#vehicles" class="brand-card" data-brand="jeep" aria-label="Filtrar veículos Jeep">
+                            <img src="assets/list-brands/jeep.svg" alt="Logo da Jeep" loading="lazy" draggable="false">
+                        </a>
+
+                        <a href="#vehicles" class="brand-card" data-brand="fiat" aria-label="Filtrar veículos Fiat">
+                            <img src="assets/list-brands/fiat.svg" alt="Logo da Fiat" loading="lazy" draggable="false">
+                        </a>
+
+                        <a href="#vehicles" class="brand-card" data-brand="peugeot"
+                            aria-label="Filtrar veículos Peugeot">
+                            <img src="assets/list-brands/peugeot.svg" alt="Logo da Peugeot" loading="lazy"
+                                draggable="false">
+                        </a>
+
+                        <a href="#vehicles" class="brand-card" data-brand="hyundai"
+                            aria-label="Filtrar veículos Hyundai">
+                            <img src="assets/list-brands/hyundai.svg" alt="Logo da Hyundai" loading="lazy"
+                                draggable="false">
+                        </a>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Faixa de preço -->
-                <div class="filter-group">
-                    <p>Faixa de preço:</p>
+            <div class="carousel-dots" aria-label="Navegação do carrossel">
+                <button class="dot is-active" type="button" data-slide="0" aria-label="Ir para o grupo de marcas 1">
+                </button>
 
-                    <div class="price-range">
-                        <div class="price-input-wrapper">
-                            <span>R$</span>
-                            <input id="price-min" class="price-input" type="text" inputmode="numeric" autocomplete="off"
-                                placeholder="Mínimo">
+                <button class="dot" type="button" data-slide="1" aria-label="Ir para o grupo de marcas 2">
+                </button>
+
+                <button class="dot" type="button" data-slide="2" aria-label="Ir para o grupo de marcas 3">
+                </button>
+            </div>
+        </section>
+
+        <section id="differences">
+            <div class="container-difer">
+                <h2>Veja por que nossos clientes escolhem a WZ Motors</h2>
+                <p>Ao comprar seu veículo conosco, você garante benefícios exclusivos:</p>
+            </div>
+
+            <ul class="container-benefits">
+                <li> <!-- Link para o WhatsApp (Seguro) -->
+                    <a href="https://wa.me/5534984413141?text=Olá!%20Estou%20interessado%20em%20comprar%20um%20veículo%20na%20WZ%20Motors%20e%20gostaria%20de%20saber%20como%20funciona%20o%20desconto%20exclusivo%20no%20seguro.%20Podem%20me%20passar%20mais%20informações?"
+                        class="benefit-card hidden" target="_blank" rel="noopener noreferrer">
+                        <div class="cont-benefits">
+                            <h3>Proteja seu carro com economia</h3>
                         </div>
 
-                        <div class="price-input-wrapper">
-                            <span>R$</span>
-                            <input id="price-max" class="price-input" type="text" inputmode="numeric" autocomplete="off"
-                                placeholder="Máximo">
+                        <div class="img-wrapper">
+                            <img src="assets/differences/benefits1.webp" alt="Cliente contratando seguro com desconto"
+                                class="img-benefits" loading="lazy" />
+
+                            <div class="badge badge-1">
+                                <strong class="highlight-number">15% OFF</strong> no seguro
+                            </div>
+
+                            <div class="badge badge-2">
+                                <strong class="highlight">Sem burocracia</strong> e aprovação rápida
+                            </div>
                         </div>
-                    </div>
 
-                    <p>Ou escolha uma faixa:</p>
+                        <span class="cta-card-benefits">
+                            Quero meu desconto no seguro →
+                        </span>
+                    </a>
+                </li>
+                <li> <!-- Link para o WhatsApp (Pagamento) -->
+                    <a href="https://wa.me/5534984413141?text=Olá!%20Estou%20procurando%20um%20veículo%20e%20gostaria%20de%20simular%20as%20condições%20de%20pagamento%20disponíveis.%20Podem%20me%20ajudar?"
+                        class="benefit-card hidden" target="_blank" rel="noopener noreferrer">
+                        <div class="cont-benefits">
+                            <h3>Condições especiais no pagamento</h3>
+                        </div>
 
-                    <div class="price-tags">
-                        <button class="btn-price" data-value="60000" type="button">Até 60 mil</button>
-                        <button class="btn-price" data-value="70000" type="button">Até 70 mil</button>
-                        <button class="btn-price" data-value="100000" type="button">Até 100 mil</button>
-                    </div>
-                </div>
+                        <div class="img-wrapper">
+                            <img src="assets/differences/benefits2.webp"
+                                alt="Opções de pagamento facilitado para compra de veículos" class="img-benefits"
+                                loading="lazy" />
 
-                <!-- Marca -->
-                <div class="filter-group">
-                    <p>Marca:</p>
+                            <div class="badge badge-1">
+                                <strong class="highlight-number">20% OFF</strong> nas parcelas
+                            </div>
 
-                    <div class="brand-options">
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="BMW" />
-                            <span>BMW</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Chevrolet" />
-                            <span>Chevrolet</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Honda" />
-                            <span>Honda</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Fiat" />
-                            <span>Fiat</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Volkswagen" />
-                            <span>Volkswagen</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Mercedes" />
-                            <span>Mercedes</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Peugeot" />
-                            <span>Peugeot</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Toyota" />
-                            <span>Toyota</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Audi" />
-                            <span>Audi</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Hyundai" />
-                            <span>Hyundai</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Jeep" />
-                            <span>Jeep</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Citroën" />
-                            <span>Citroën</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="Renault" />
-                            <span>Renault</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-mark="KIA" />
-                            <span>KIA</span>
-                        </label>
-                    </div>
-                </div>
+                            <div class="badge badge-2">
+                                <strong class="highlight">Planos flexíveis</strong> para você
+                            </div>
+                        </div>
 
-                <!-- Cor -->
-                <div class="filter-group">
-                    <p>Cor:</p>
+                        <span class="cta-card-benefits">
+                            Quero simular pagamento →
+                        </span>
+                    </a>
+                </li>
+                <li> <!-- Link para o WhatsApp (Assistência) -->
+                    <a href="https://wa.me/5534984413141?text=Olá!%20Tenho%20interesse%20em%20comprar%20um%20veículo%20na%20WZ%20Motors%20e%20gostaria%20de%20conhecer%20melhor%20os%20benefícios%20e%20o%20suporte%20oferecido%20após%20a%20compra."
+                        class="benefit-card hidden" target="_blank" rel="noopener noreferrer">
+                        <div class="cont-benefits">
+                            <h3>Compre com mais tranquilidade</h3>
+                        </div>
 
-                    <div class="color-options">
-                        <!-- Preto -->
-                        <label class="color-item">
-                            <input type="checkbox" data-color="preto" aria-label="Cor preta" />
-                            <span class="select-color" style="background-color: #000;"></span>
-                        </label>
+                        <div class="img-wrapper">
+                            <img src="assets/differences/benefits3.webp"
+                                alt="Atendimento e suporte técnico ao cliente após a compra" class="img-benefits"
+                                loading="lazy" />
 
-                        <!-- Branco -->
-                        <label class="color-item">
-                            <input type="checkbox" data-color="branco" aria-label="Cor branca" />
-                            <span class="select-color" style="background-color: #fff ;"></span>
-                        </label>
+                            <div class="badge badge-1">
+                                <strong class="highlight">Suporte completo</strong> garantido
+                            </div>
 
-                        <!-- Bege -->
-                        <label class="color-item">
-                            <input type="checkbox" data-color="bege" aria-label="Cor bege" />
-                            <span class="select-color" style="background-color: #F5F5DC ;"></span>
-                        </label>
+                            <div class="badge badge-2">
+                                <strong class="highlight-number">6</strong> <strong class="highlight">meses
+                                    grátis</strong>
+                                de assistência
+                            </div>
+                        </div>
 
-                        <!-- Amarelo -->
-                        <label class="color-item">
-                            <input type="checkbox" data-color="amarelo" aria-label="Cor amarela" />
-                            <span class="select-color" style="background-color: #FF0 ;"></span>
-                        </label>
+                        <span class="cta-card-benefits">
+                            Quero comprar com segurança →
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <a href="#vehicles" class="btn-cta">Encontrar meu carro ideal</a>
+        </section>
 
-                        <!-- Vermelho -->
-                        <label class="color-item">
-                            <input type="checkbox" data-color="vermelho" aria-label="Cor vermelha" />
-                            <span class="select-color" style="background-color: #b00 ;"></span>
-                        </label>
+        <section id="vehicles" aria-labelledby="vehicles-title">
 
-                        <!-- Cinza -->
-                        <label class="color-item">
-                            <input type="checkbox" data-color="cinza" aria-label="Cor cinza" />
-                            <span class="select-color" style="background-color: #808080 ;"></span>
-                        </label>
+            <!-- Cabeçalho -->
+            <div class="vehicles-header">
+                <div class="vehicles-title-subtitle">
+                    <h2 class="vehicles-title">
+                        Agora que você já conhece os benefícios, veja alguns modelos disponíveis
+                    </h2>
 
-                        <!-- Azul -->
-                        <label class="color-item">
-                            <input type="checkbox" data-color="azul" aria-label="Cor azul" />
-                            <span class="select-color" style="background-color: #00F ;"></span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Ano -->
-                <div class="filter-group">
-                    <p>Ano:</p>
-
-                    <select class="year-option">
-                        <option value="">Todos</option>
-                        <option value="2000">2000</option>
-                        <option value="2001">2001</option>
-                        <option value="2002">2002</option>
-                        <option value="2003">2003</option>
-                        <option value="2004">2004</option>
-                        <option value="2005">2005</option>
-                        <option value="2006">2006</option>
-                        <option value="2007">2007</option>
-                        <option value="2008">2008</option>
-                        <option value="2009">2009</option>
-                        <option value="2010">2010</option>
-                        <option value="2011">2011</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
-                        <option value="2014">2014</option>
-                        <option value="2015">2015</option>
-                        <option value="2016">2016</option>
-                        <option value="2017">2017</option>
-                        <option value="2018">2018</option>
-                        <option value="2019">2019</option>
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
-                    </select>
-                </div>
-
-                <!-- Modelo -->
-                <div class="filter-group">
-                    <p>Modelo:</p>
-
-                    <div class="model-options">
-                        <label class="check-item">
-                            <input type="checkbox" data-model="SUV" />
-                            <span>SUV</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-model="Sedan" />
-                            <span>Sedan</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-model="Hatch" />
-                            <span>Hatch</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-model="Picape" />
-                            <span>Picape</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-model="Híbrido" />
-                            <span>Híbrido</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Conservação -->
-                <div class="filter-group">
-                    <p>Conservação:</p>
-
-                    <div class="condition-options">
-                        <label class="check-item">
-                            <input type="checkbox" data-conservation="Novo" />
-                            <span>Novo</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-conservation="Seminovo" />
-                            <span>Seminovo</span>
-                        </label>
-                        <label class="check-item">
-                            <input type="checkbox" data-conservation="Usado" />
-                            <span>Usado</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Ações (Limpar e Fechar o Filtro)-->
-                <div class="filter-actions-bottom">
-                    <button class="btn-reset" type="button">Limpar filtros</button>
-                    <button class="btn-close-filter" id="btn-close-filter" type="button">Fechar filtro<i
-                            class="fa-solid fa-x"></i></button>
-                </div>
-            </div>
-
-            <!-- Contador -->
-            <div class="results-counter" aria-live="polite">
-                Mostrando <strong id="visible-count">0</strong> de <strong id="total-count">0</strong> veículos
-                disponíveis
-            </div>
-        </div>
-
-        <!-- Área da listagem -->
-        <div class="vehicles-wrapper">
-
-            <!-- Lista -->
-            <div class="vehicle-grid" id="vehicle-list">
-
-            </div>
-        </div>
-
-        <!-- Estado vazio -->
-        <div class="empty-state" id="empty-state" hidden>
-            <i class="fa-solid fa-car-side"></i>
-
-            <h3>Nenhum veículo encontrado</h3>
-
-            <p>Tente ajustar os filtros para encontrar mais opções.</p>
-        </div>
-
-        <!-- Ações da listagem -->
-        <div class="vehicle-actions" id="vehicle-actions">
-            <button class="vehicle-action-btn" id="load-more-btn" type="button">
-                <i class="fa-solid fa-plus"></i>
-                Ver mais veículos
-            </button>
-
-            <button class="vehicle-action-btn" id="load-less-btn" type="button">
-                <i class="fa-solid fa-minus"></i>
-                Ver menos
-            </button>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <div class="testim-header">
-            <h2>Quem compra, recomenda</h2>
-            <p>Descubra o que nossos clientes têm a dizer sobre a experiência de comprar na WZ Motors.</p>
-        </div>
-
-        <div class="container-testim">
-            <div class="testim-card">
-                <img class="testim-image" src="assets/carlos-alberto.webp" alt="Carlos Alberto, cliente da WZ Motors"
-                    loading="lazy" />
-
-                <div class="testim-content">
-                    <h3>Carlos Alberto</h3>
-                    <p>"Quero compartilhar minha experiência com a WZ Motors. Já comprei outros carros antes, mas nunca
-                        tinha recebido um atendimento tão atencioso e transparente. O veículo está perfeito até agora, e
-                        o desconto na seguradora fez toda a diferença no fechamento do negócio. Desde o primeiro
-                        contato, me senti seguro e bem orientado em cada etapa da compra. Fiquei muito satisfeito com a
-                        experiência."</p>
-                </div>
-
-                <i class="fa-solid fa-quote-right"></i>
-            </div>
-
-            <div class="testim-card">
-                <img class="testim-image" src="assets/maria-raiane.webp" alt="Maria Raiane, cliente da WZ Motors"
-                    loading="lazy" />
-
-                <div class="testim-content">
-                    <h3>Maria Raiane</h3>
-                    <p>"Comprei meu carro na WZ Motors e fiquei muito satisfeita com todo o atendimento. O desconto na
-                        seguradora foi uma ótima surpresa, ajudando a economizar sem abrir mão da tranquilidade. A
-                        equipe teve muita paciência para esclarecer todas as minhas dúvidas sobre o financiamento, e saí
-                        de lá confiante e feliz com a minha escolha."
+                    <p>
+                        Escolha o modelo ideal para o seu perfil e fale com um especialista.
                     </p>
                 </div>
 
-                <i class="fa-solid fa-quote-right"></i>
-            </div>
+                <!-- Botão abrir filtros -->
+                <button class="btn-filter" id="button-filter" aria-expanded="false" aria-controls="filters">
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        Filtros
+                    </span>
+                    <i class="fa-solid fa-angle-up" id="icon-filters" aria-hidden="true"></i>
+                </button>
 
-            <div class="testim-card">
-                <img class="testim-image" src="assets/joao-antonio.webp" alt="João Antonio, cliente da WZ Motors"
-                    loading="lazy" />
-
-                <div class="testim-content">
-                    <h3>João Antonio</h3>
-                    <p>"Optei por fazer um consórcio por meio da empresa parceira da WZ Motors e todo o processo foi
-                        muito mais simples do que eu imaginava. A equipe explicou cada etapa com clareza, as condições
-                        oferecidas ajudaram bastante no planejamento e hoje já estou com meu carro novo. Além disso, o
-                        suporte após a contratação sempre foi atencioso e prestativo. Valeu muito a pena."</p>
+                <!-- Quick Filters: são atalhos. -->
+                <div class="quick-filters" aria-label="Filtros rápidos">
+                    <button class="quick-chip" data-type="modelo" data-filter="SUV" type="button">SUVs</button>
+                    <button class="quick-chip" data-type="conservacao" data-filter="Seminovo"
+                        type="button">Seminovos</button>
+                    <button class="quick-chip" data-type="preco" data-filter="40000" type="button">Até 40 mil</button>
+                    <button class="quick-chip" data-type="modelo" data-filter="Hatch" type="button">Hatch</button>
                 </div>
 
-                <i class="fa-solid fa-quote-right"></i>
-            </div>
-        </div>
+                <!-- Painel de filtros -->
+                <div class="filter-options" id="filters" aria-hidden="true">
 
-        <a href="" class="btn-cta">Quero falar com um especialista agora</a>
-    </section>
-
-    <section id="on">
-        <div class="container-on">
-            <div class="on-header">
-                <h2>Conheça a WZ Motors</h2>
-                <h3>Do primeiro contato à entrega das chaves, estamos com você.</h3>
-            </div>
-
-            <div class="on-content">
-                <div class="on-content-left">
-                    <div class="on-text">
-                        <p>Comprar um carro é uma decisão importante, e você merece fazer essa escolha com
-                            tranquilidade.</p>
-                        <p>Na WZ Motors, oferecemos atendimento próximo, condições especiais de compra e suporte em cada
-                            etapa do processo, para que você encontre o veículo ideal sem complicações.</p>
-                        <p>Aqui, você conta com orientação transparente, benefícios exclusivos e uma equipe preparada
-                            para
-                            ajudar antes, durante e depois da compra.</p>
+                    <!-- Buscar -->
+                    <div class="filter-group">
+                        <p>Buscar veículo:</p>
+                        <input class="search-name" type="text" placeholder="Digite o nome do veículo..." />
                     </div>
 
-                    <div class="on-stats">
-                        <div class="stat-card">
-                            <strong class="highlight">+1mil</strong>
-                            <span>Veículos vendidos</span>
+                    <!-- Faixa de preço -->
+                    <div class="filter-group">
+                        <p>Faixa de preço:</p>
+
+                        <div class="price-range">
+                            <div class="price-input-wrapper">
+                                <span>R$</span>
+                                <input id="price-min" class="price-input" type="text" inputmode="numeric"
+                                    autocomplete="off" placeholder="Mínimo">
+                            </div>
+
+                            <div class="price-input-wrapper">
+                                <span>R$</span>
+                                <input id="price-max" class="price-input" type="text" inputmode="numeric"
+                                    autocomplete="off" placeholder="Máximo">
+                            </div>
                         </div>
 
-                        <div class="stat-card">
-                            <strong class="highlight">98%</strong>
-                            <span>Clientes satisfeitos</span>
-                        </div>
+                        <p>Ou escolha uma faixa:</p>
 
-                        <div class="stat-card">
-                            <strong class="highlight">5 anos</strong>
-                            <span>de mercado</span>
+                        <div class="price-tags">
+                            <button class="btn-price" data-value="60000" type="button">Até 60 mil</button>
+                            <button class="btn-price" data-value="70000" type="button">Até 70 mil</button>
+                            <button class="btn-price" data-value="100000" type="button">Até 100 mil</button>
                         </div>
                     </div>
 
-                    <a href="#vehicles" class="btn-cta">Encontrar meu carro ideal</a>
+                    <!-- Marca -->
+                    <div class="filter-group">
+                        <p>Marca:</p>
+
+                        <div class="brand-options">
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="bmw" />
+                                <span>BMW</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="chevrolet" />
+                                <span>Chevrolet</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="honda" />
+                                <span>Honda</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="fiat" />
+                                <span>Fiat</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="volkswagen" />
+                                <span>Volkswagen</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="mercedes" />
+                                <span>Mercedes</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="peugeot" />
+                                <span>Peugeot</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="toyota" />
+                                <span>Toyota</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="audi" />
+                                <span>Audi</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="hyundai" />
+                                <span>Hyundai</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="jeep" />
+                                <span>Jeep</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="citroen" />
+                                <span>Citroën</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="renault" />
+                                <span>Renault</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-mark="kia" />
+                                <span>KIA</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Cor -->
+                    <div class="filter-group">
+                        <p>Cor:</p>
+
+                        <div class="color-options">
+                            <!-- Preto -->
+                            <label class="color-item">
+                                <input type="checkbox" data-color="preto" aria-label="Cor preta" />
+                                <span class="select-color" style="background-color: #000;"></span>
+                            </label>
+
+                            <!-- Branco -->
+                            <label class="color-item">
+                                <input type="checkbox" data-color="branco" aria-label="Cor branca" />
+                                <span class="select-color" style="background-color: #fff ;"></span>
+                            </label>
+
+                            <!-- Bege -->
+                            <label class="color-item">
+                                <input type="checkbox" data-color="bege" aria-label="Cor bege" />
+                                <span class="select-color" style="background-color: #F5F5DC ;"></span>
+                            </label>
+
+                            <!-- Amarelo -->
+                            <label class="color-item">
+                                <input type="checkbox" data-color="amarelo" aria-label="Cor amarela" />
+                                <span class="select-color" style="background-color: #FF0 ;"></span>
+                            </label>
+
+                            <!-- Vermelho -->
+                            <label class="color-item">
+                                <input type="checkbox" data-color="vermelho" aria-label="Cor vermelha" />
+                                <span class="select-color" style="background-color: #b00 ;"></span>
+                            </label>
+
+                            <!-- Cinza -->
+                            <label class="color-item">
+                                <input type="checkbox" data-color="cinza" aria-label="Cor cinza" />
+                                <span class="select-color" style="background-color: #808080 ;"></span>
+                            </label>
+
+                            <!-- Azul -->
+                            <label class="color-item">
+                                <input type="checkbox" data-color="azul" aria-label="Cor azul" />
+                                <span class="select-color" style="background-color: #00F ;"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Ano -->
+                    <div class="filter-group">
+                        <p>Ano:</p>
+
+                        <select class="year-option">
+                            <option value="">Todos</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                        </select>
+                    </div>
+
+                    <!-- Modelo -->
+                    <div class="filter-group">
+                        <p>Modelo:</p>
+
+                        <div class="model-options">
+                            <label class="check-item">
+                                <input type="checkbox" data-model="SUV" />
+                                <span>SUV</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-model="Sedan" />
+                                <span>Sedan</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-model="Hatch" />
+                                <span>Hatch</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-model="Picape" />
+                                <span>Picape</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-model="Híbrido" />
+                                <span>Híbrido</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-model="Elétrico" />
+                                <span>Elétrico</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Conservação -->
+                    <div class="filter-group">
+                        <p>Conservação:</p>
+
+                        <div class="condition-options">
+                            <label class="check-item">
+                                <input type="checkbox" data-conservation="Novo" />
+                                <span>Novo</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-conservation="Seminovo" />
+                                <span>Seminovo</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" data-conservation="Usado" />
+                                <span>Usado</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Limpar o Filtro -->
+                    <div class="filter-actions-bottom">
+                        <button class="btn-reset" type="button">
+                            <i class="fa-solid fa-trash-can"></i>
+                            Limpar filtros
+                        </button>
+                    </div>
                 </div>
 
-                <div class="on-content-right">
-                    <img src="assets/wz-motors-facade.webp" class="on-image" alt="Imagem Equipe WZ Motors" />
+                <!-- Contador -->
+                <div class="results-counter" aria-live="polite">
+                    <span class="results-prefix">Mostrando </span>
+
+                    <span id="visible-count">3</span>
+
+                    <span class="results-separator">de</span>
+
+                    <span id="total-count">12</span>
+
+                    <span class="results-suffix"> veículos disponíveis</span>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <!-- Área da listagem -->
+            <div class="vehicles-wrapper">
+
+                <!-- Lista -->
+                <div class="vehicle-grid" id="vehicle-list">
+
+                </div>
+            </div>
+
+            <!-- Estado vazio -->
+            <div class="empty-state" id="empty-state" hidden>
+                <h3>Ainda não encontramos seu veículo ideal</h3>
+
+                <p>Ajuste os filtros para descobrir outras opções.</p>
+
+                <!-- Botão limpar filtros -->
+                <div class="filter-reset">
+                    <button class="btn-reset" type="button">
+                        <i class="fa-solid fa-trash-can"></i>
+                        Limpar filtros
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ações da listagem -->
+            <div class="vehicle-actions" id="vehicle-actions">
+                <button class="vehicle-action-btn" id="load-more-btn" type="button">
+                    <i class="fa-solid fa-plus"></i>
+                    Ver mais
+                </button>
+
+                <button class="vehicle-action-btn" id="load-less-btn" type="button">
+                    <i class="fa-solid fa-minus"></i>
+                    Ver menos
+                </button>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="testim-header">
+                <h2>Quem compra, recomenda</h2>
+                <p>Descubra o que nossos clientes têm a dizer sobre a experiência de comprar na WZ Motors.</p>
+            </div>
+
+            <div class="container-testim">
+                <article class="testim-card">
+                    <img class="testim-image" src="assets/testimonials/carlos-alberto.webp"
+                        alt="Carlos Alberto, cliente da WZ Motors" loading="lazy" />
+
+                    <div class="testim-content">
+                        <h3>Carlos Alberto</h3>
+                        <blockquote>"Já comprei outros carros antes, mas nunca tinha recebido um atendimento tão
+                            atencioso e transparente. O veículo está perfeito até agora, e o desconto na seguradora fez
+                            toda a diferença. Desde o primeiro contato, me senti seguro e bem orientado em cada etapa da
+                            compra."
+                        </blockquote>
+                    </div>
+
+                    <i class="fa-solid fa-quote-right"></i>
+                </article>
+
+                <article class="testim-card">
+                    <img class="testim-image" src="assets/testimonials/maria-raiane.webp"
+                        alt="Maria Raiane, cliente da WZ Motors" loading="lazy" />
+
+                    <div class="testim-content">
+                        <h3>Maria Raiane</h3>
+                        <blockquote>"Comprei meu carro na WZ Motors e fiquei muito satisfeita com o atendimento. O
+                            desconto na seguradora foi uma ótima surpresa e ajudou a economizar sem abrir mão da
+                            tranquilidade. A equipe esclareceu todas as minhas dúvidas sobre o financiamento, e saí de
+                            lá confiante com a minha escolha."
+                        </blockquote>
+                    </div>
+
+                    <i class="fa-solid fa-quote-right"></i>
+                </article>
+
+                <article class="testim-card">
+                    <img class="testim-image" src="assets/testimonials/joao-antonio.webp"
+                        alt="João Antonio, cliente da WZ Motors" loading="lazy" />
+
+                    <div class="testim-content">
+                        <h3>João Antonio</h3>
+                        <blockquote>"Fiz um consórcio pela empresa parceira da WZ Motors e todo o processo foi muito
+                            mais simples do que eu imaginava. A equipe explicou cada etapa com clareza, as condições
+                            facilitaram o planejamento e hoje já estou com meu carro novo. O suporte após a contratação
+                            também foi atencioso e prestativo."
+                        </blockquote>
+                    </div>
+
+                    <i class="fa-solid fa-quote-right"></i>
+                </article>
+            </div>
+
+            <a href="https://wa.me/5534984413141?text=Olá!%20👋%0A%0AAcabei%20de%20ler%20os%20depoimentos%20dos%20clientes%20da%20WZ%20Motors%20e%20fiquei%20interessado(a)%20em%20conhecer%20melhor%20as%20opções%20disponíveis.%0A%0AGostaria%20de%20falar%20com%20um%20especialista%20para%20tirar%20algumas%20dúvidas%20e%20receber%20orientações%20sobre%20a%20compra%20do%20meu%20próximo%20veículo.%0A%0AAguardo%20seu%20retorno.%20Obrigado!"
+                target="_blank" rel="noopener noreferrer" class="btn-cta">
+                Quero falar com um especialista agora
+            </a>
+        </section>
+
+        <section id="on">
+            <div class="container-on">
+                <div class="on-header">
+                    <h2>Conheça a WZ Motors</h2>
+                    <h3>Do primeiro contato à entrega das chaves, estamos com você.</h3>
+                </div>
+
+                <div class="on-content">
+                    <div class="on-content-left">
+                        <div class="on-text">
+                            <p>Comprar um carro é uma decisão importante, e você merece fazer essa escolha com
+                                tranquilidade.</p>
+                            <p>Na WZ Motors, oferecemos atendimento próximo, condições especiais de compra e suporte em
+                                cada
+                                etapa do processo, para que você encontre o veículo ideal sem complicações.</p>
+                            <p>Aqui, você conta com orientação transparente, benefícios exclusivos e uma equipe
+                                preparada
+                                para
+                                ajudar antes, durante e depois da compra.</p>
+                        </div>
+
+                        <div class="on-stats">
+                            <div class="stat-card">
+                                <strong class="highlight">+1mil</strong>
+                                <span>Veículos vendidos</span>
+                            </div>
+
+                            <div class="stat-card">
+                                <strong class="highlight">98%</strong>
+                                <span>Clientes satisfeitos</span>
+                            </div>
+
+                            <div class="stat-card">
+                                <strong class="highlight">5 anos</strong>
+                                <span>de mercado</span>
+                            </div>
+                        </div>
+
+                        <a href="#vehicles" class="btn-cta">Encontrar meu carro ideal</a>
+                    </div>
+
+                    <div class="on-content-right">
+                        <img src="assets/sobre/wz-motors-facade.webp" class="on-image" alt="Imagem Equipe WZ Motors" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer id="footer">
         <div class="container-footer">
+            <!-- Coluna Institucional-->
             <div class="footer-brand">
                 <div class="text-tab">
-                    <img src="assets/logo2.webp" class="img-logo-footer" alt="Logo da WZ Motors" />
+                    <img src="assets/company-logo/logo2.webp" class="img-logo-footer" alt="Logo da WZ Motors" />
                     <p>Encontrar o carro ideal não precisa ser complicado. Nossa equipe está pronta para ajudar você a
                         escolher o veículo certo, esclarecer todas as dúvidas e apresentar as melhores condições para
                         transformar seu objetivo em realidade.</p>
@@ -575,18 +692,26 @@
                         </div>
                     </address>
 
-                    <!-- logo de cada rede social-->
+                    <!-- Cards das Redes Sociais-->
                     <div class="social-links">
-                        <a class="social-card" href="#" aria-label="Facebook da WZ Motors"><i
-                                class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-                        <a class="social-card" href="#" aria-label="Instagram da WZ Motors"><i
-                                class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                        <a class="social-card" href="#" aria-label="Whatsapp da WZ Motors"><i
-                                class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                        <a class="social-card" href="#" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook da WZ Motors">
+                            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-card" href="#" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram da WZ Motors">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-card"
+                            href="https://wa.me/5534984413141?text=Olá!%20👋%0A%0AAcabei%20de%20visitar%20o%20site%20da%20WZ%20Motors%20e%20gostaria%20de%20receber%20ajuda%20para%20encontrar%20o%20veículo%20ideal.%0A%0APoderia%20me%20apresentar%20algumas%20opções%20disponíveis?"
+                            target="_blank" rel="noopener noreferrer" aria-label="Whatsapp da WZ Motors">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
+            <!-- Coluna do Endereço e Mapa -->
             <div class="footer-info">
                 <div class="address-tab">
                     <h2>Endereço</h2>
@@ -597,11 +722,13 @@
                 </div>
                 <div class="footer-map">
                     <iframe src="https://maps.google.com/maps?q=Uberlândia,MG&t=&z=12&ie=UTF8&iwloc=&output=embed"
-                        loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+                        loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa da localização da WZ Motors em Uberlândia">
                     </iframe>
                 </div>
             </div>
 
+            <!-- Coluna do Horário de Funcionamento -->
             <div class="footer-operation">
                 <div class="time-tab">
                     <h2>Funcionamento</h2>
@@ -613,39 +740,63 @@
                 </div>
             </div>
 
-            <div class="footer-navigation">
-                <div class="contact-main">
-                    <h2>Página</h2>
-                    <div class="main-links" aria-label="Links do rodapé">
-                        <a href="#home">Home</a>
-                        <a href="#differences">Diferenciais</a>
-                        <a href="#vehicles">Veículos</a>
-                        <a href="#testimonials">Depoimentos</a>
-                        <a href="#on">Sobre</a>
-                    </div>
-                </div>
+            <!-- Coluna dos Diferenciais -->
+            <div class="footer-benefits">
+                <h2>Diferenciais</h2>
+
+                <ul class="benefits-list">
+                    <li>
+                        <i class="fa-solid fa-user-check" aria-hidden="true"></i>
+                        <span>Atendimento personalizado</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+                        <span>Financiamento e consórcio</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+                        <span>Desconto em seguradoras parceiras</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
+                        <span>Suporte após a compra</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                        <span>Processo transparente e seguro</span>
+                    </li>
+                </ul>
             </div>
         </div>
 
+        <!-- Parte do CTA -->
         <div class="footer-cta">
-            <h3>Pronto para encontrar seu próximo carro?</h3>
-            <a href="#vehicles" class="btn-cta">
-                Encontrar meu carro ideal
-            </a>
+            <h3>Encontre seu próximo carro com a ajuda de um especialista.</h3>
+
+            <div class="footer-actions">
+                <a href="https://wa.me/5534984413141?text=Olá!%20👋%0A%0AAcabei%20de%20visitar%20o%20site%20da%20WZ%20Motors%20e%20gostaria%20de%20receber%20ajuda%20para%20encontrar%20o%20veículo%20ideal.%0A%0APoderia%20me%20apresentar%20algumas%20opções%20disponíveis?"
+                    class="btn-cta" target="_blank" rel="noopener noreferrer">
+                    Falar com um especialista
+                </a>
+
+                <a href="#vehicles" class="btn-secondary">
+                    Ver veículos disponíveis
+                </a>
+            </div>
         </div>
 
+        <!-- Imagem Decorativa -->
         <div class="control-image">
-            <img src="assets/image-footer.png" class="image-footer" alt="" aria-hidden="true">
+            <img src="assets/footer/image-footer.png" class="image-footer" alt="" aria-hidden="true">
         </div>
 
-        <div class="footer-divider"></div>
-
+        <!-- Parte Final -->
         <div class="footer-bottom">
             <p>&copy; copyright 2026 | Desenvolvido por Luís</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="Js/main.js"></script>
 </body>
 
 </html>

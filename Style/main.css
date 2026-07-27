@@ -2,11 +2,12 @@
 @import url("typography.css");
 @import url("header.css");
 @import url("home.css");
-@import url("diferenciais.css");
-@import url("veiculos.css");
-@import url("depoimentos.css");
+@import url("benefits.css");
+@import url("vehicles.css");
+@import url("testimonials.css");
 @import url("sobre.css");
 @import url("footer.css");
+@import url("brands.css");
 
 * {
     margin: 0;
@@ -25,7 +26,9 @@ section {
 .hidden {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s ease;
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
 }
 
 .show {
@@ -41,17 +44,12 @@ section {
     border: none;
     border-radius: 8px;
     text-decoration: none;
+    text-align: center;
     font-weight: 500;
     font-size: clamp(1rem, 2vw, 1.15rem);
     font-family: var(--font-title);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow .3s ease;
-    box-shadow: var(--shadow-btn);
-}
-
-.btn-cta:hover {
-    background-color: #d97706;
-    transform: translateY(-2px);
     box-shadow: var(--shadow-btn);
 }
 
@@ -62,4 +60,32 @@ section {
 
 .btn-cta:active {
     transform: translateY(1px);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+
+    #home { order: 1; }
+
+    #brands { order: 2; }
+
+    #vehicles { order: 3; }
+
+    #differences { order: 4; }
+
+    #testimonials { order: 5; }
+
+    #on { order: 6; }
+}
+
+@media (hover: hover) {
+    .btn-cta:hover {
+        background-color: #d97706;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-btn);
+    }
 }
