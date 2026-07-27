@@ -1,0 +1,407 @@
+/* ==================================================
+   FOOTER - ESTRUTURA PRINCIPAL
+================================================== */
+#footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 60px 0 60px;
+    background: #092E6E;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.container-footer {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr 1fr 1.2fr;
+    column-gap: 40px;
+}
+
+
+/* ==================================================
+   FOOTER - TIPOGRAFIA E CORES
+================================================== */
+#footer h2,
+#footer h3 {
+    color: var(--light-gray);
+}
+
+.container-footer p,
+.container-footer li,
+.container-footer span {
+    color: #E0E0E0;
+}
+
+
+/* ==================================================
+   FOOTER - COLUNA INSTITUCIONAL
+================================================== */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.text-tab {
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.img-logo-footer {
+    width: 120px;
+    height: auto;
+}
+
+
+/* ==================================================
+   FOOTER - CONTATOS
+================================================== */
+.social-space {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contact-tab {
+    display: flex;
+    flex-direction: column;
+}
+
+.address {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.address a {
+    text-decoration: none;
+    color: #E0E0E0;
+    line-height: 1.8;
+    width: fit-content;
+    transition: color 0.3s ease;
+}
+
+
+/* ==================================================
+   FOOTER - REDES SOCIAIS
+================================================== */
+.social-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 26px;
+}
+
+.social-card {
+    color: var(--emphasis-color);
+    padding: 16px 20px;
+    border-radius: 12px;
+    background: var(--light-gray);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.social-card:focus-visible {
+    outline: 3px solid var(--emphasis-color);
+    outline-offset: 4px;
+}
+
+
+/* ==================================================
+   FOOTER - ENDEREÇO E MAPA
+================================================== */
+.footer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.address-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 1.8;
+}
+
+.text-addres {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    color: #E0E0E0;
+    gap: 8px;
+}
+
+.footer-map {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.footer-map iframe {
+    width: 90%;
+    height: 200px;
+    border: none;
+    border-radius: 12px;
+}
+
+
+/* ==================================================
+   FOOTER - FUNCIONAMENTO
+================================================== */
+.footer-operation {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.time-tab ul {
+    list-style: none;
+
+}
+
+
+/* ==================================================
+   FOOTER - DIFERENCIAIS
+================================================== */
+.footer-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-benefits h2 {
+    margin: 0;
+}
+
+.benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.5;
+}
+
+.benefits-list i {
+    color: var(--emphasis-color);
+    font-size: 1rem;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+
+/* ==================================================
+   FOOTER - CTA
+================================================== */
+.footer-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 60px;
+}
+
+.footer-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
+    padding: 12px clamp(24px, 5vw, 62px);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    font-family: var(--font-title);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow .3s ease;
+    box-shadow: var(--shadow-btn);
+}
+
+
+/* ==================================================
+   FOOTER - ELEMENTOS DECORATIVOS
+================================================== */
+.control-image {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.image-footer {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+
+    position: absolute;
+    right: -140px;
+    bottom: 0px;
+    opacity: .14;
+}
+
+/* ==================================================
+   FOOTER - COPYRIGHT
+================================================== */
+.footer-bottom {
+    width: 100%;
+    max-width: none;
+    border-top: 1px solid rgba(255, 255, 255, .25);
+    margin-top: 60px;
+    padding: 20px 0 8px;
+
+    display: flex;
+    justify-content: center;
+    color: #ffffff70;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+@media (max-width: 992px) {
+    .container-footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .text-tab {
+        width: 100%;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE - MOBILE
+================================================== */
+@media (max-width: 768px) {
+
+    /* Estrutura Principal */
+    #footer {
+        padding: 60px 26px 0;
+    }
+
+    .container-footer {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    /* Tipografia */
+    #footer h2 {
+        margin-bottom: 12px;
+    }
+
+    /* Coluna Institucional */
+    .text-tab {
+        width: 100%;
+    }
+
+    .img-logo-footer {
+        margin: 0 auto 20px;
+    }
+
+    /* Contatos */
+    .address {
+        gap: 0;
+    }
+
+    /* Redes Sociais */
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Endereço e Mapa */
+    .footer-map iframe {
+        height: 180px;
+    }
+
+    /* Diferenciais */
+    .benefits-list li {
+        align-items: center;
+    }
+
+    /* CTA */
+    .footer-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-actions a {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    /* Elementos Decorativos */
+    .control-image {
+        display: none;
+    }
+
+    /* Copyright */
+    .footer-bottom {
+        font-size: .9rem;
+    }
+
+    /* Sequência do Footer */
+    .footer-brand {
+        order: 1;
+    }
+
+    .footer-info {
+        order: 4;
+    }
+
+    .footer-operation {
+        order: 3;
+    }
+
+    .footer-benefits {
+        order: 2;
+    }
+}
+
+/* ==================================================
+   ACESSIBILIDADE
+================================================== */
+@media (hover: hover) {
+    .address a:hover {
+        color: var(--emphasis-color);
+    }
+
+    .social-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+    }
+
+    .btn-secondary:hover {
+        background-color: var(--white-color);
+        color: #092E6E;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-btn);
+    }
+}

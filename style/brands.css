@@ -1,0 +1,273 @@
+/* ==================================================
+   BRANDS
+================================================== */
+#brands {
+    display: none;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE - MOBILE
+================================================== */
+@media (max-width: 768px) {
+
+    #brands {
+        position: relative;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 46px 0 60px;
+        margin-top: var(--space-sm);
+    }
+
+    /* Efeito de fade nas laterais */
+    #brands::before,
+    #brands::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 24px;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    #brands::before {
+        left: 0;
+        background: linear-gradient(to right, #fff, transparent);
+    }
+
+    #brands::after {
+        right: 0;
+        background: linear-gradient(to left, #fff, transparent);
+    }
+
+    /* Título */
+    .brands-title {
+        margin-bottom: var(--space-md);
+        text-align: center;
+        font-size: .85rem;
+        font-weight: 600;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        opacity: .5;
+    }
+
+    /* Janela do carrossel */
+    .brands-carousel {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Trilho */
+    .brands-wrapper {
+        width: 100%;
+        display: flex;
+
+        --carousel-duration: 450ms;
+        --carousel-easing: cubic-bezier(.22, .61, .36, 1);
+
+        transition: transform var(--carousel-duration) var(--carousel-easing);
+
+        touch-action: pan-y;
+
+        --current-slide: 0;
+        --drag-offset: 0px;
+
+        transform: translateX(
+            calc(
+                (var(--current-slide) * -100%) + var(--drag-offset)
+            )
+        );        
+    }
+
+    .brands-wrapper.is-dragging {
+        transition: none;
+    }
+
+    .brands-wrapper.is-dragging .brand-card {
+        cursor: grabbing;
+    }
+
+    /* Card */
+    .brands-slide {
+        --gap: 12px;
+
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--gap);
+        padding-inline: clamp(20px, 5vw, 28px);
+    }
+
+    .brand-card {
+        flex: 1 1 calc((100% - (3 * var(--gap))) / 4);
+
+        min-width: 72px;
+        max-width: 120px;
+        height: 72px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+
+        border-radius: 12px;
+        background: #fff;
+
+        border: 1px solid rgba(0, 0, 0, .06);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, .05);
+
+        cursor: pointer;
+
+        transition:
+            transform .30s cubic-bezier(.22, .61, .36, 1),
+            box-shadow .30s ease,
+            border-color .30s ease,
+            background-color .30s ease,
+            outline-offset .30s ease;
+    }
+
+    .brand-card:active {
+        transform: scale(.97);
+    }
+
+    .brand-card:focus-visible {
+        outline: 2px solid var(--emphasis-color);
+        outline-offset: 4px;
+        border-color: var(--emphasis-color);
+    }
+
+    /* Estado selecionado */
+    .brand-card.is-selected {
+        border-color: var(--emphasis-color);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, .10);
+    }
+
+    /* Logos */
+    .brand-card img {
+        display: block;
+
+        max-width: 70%;
+        max-height: 60%;
+        object-fit: contain;
+        object-position: center;
+
+        filter: grayscale(100%);
+        opacity: .7;
+
+        transition:
+            filter .25s,
+            opacity .25s,
+            transform .25s;
+    }
+
+    .brand-card.is-selected img {
+        filter: none;
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    .brand-card[data-brand="honda"] img {
+        max-width: 58%;
+    }
+
+    .brand-card[data-brand="audi"] img {
+        max-width: 80%;
+        max-height: 70%;
+    }
+
+    .brand-card[data-brand="mercedes"] img {
+        max-width: 58%;
+        max-height: 58%;
+    }
+
+    .brand-card[data-brand="chevrolet"] img {
+        max-width: 86%;
+        max-height: 76%;
+    }
+    
+    .brand-card[data-brand="volkswagen"] img {
+        max-width: 56%;
+        max-height: 56%;
+    }
+
+    .brand-card[data-brand="toyota"] img {
+        max-width: 70%;
+        max-height: 60%;
+    }
+
+    .brand-card[data-brand="kia"] img {
+        max-width: 80%;
+        max-height: 70%;
+    }
+
+    .brand-card[data-brand="jeep"] img {
+        max-width: 76%;
+        max-height: 66%;
+    }
+
+    .brand-card[data-brand="hyundai"] img {
+        max-width: 76%;
+        max-height: 66%;
+    }
+    
+    .brand-card[data-brand="peugeot"] img {
+       filter: drop-shadow(0 0 0 currentColor);
+    }
+    
+    /* Indicadores */
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .carousel-dots .dot {
+        all: unset;
+        appearance: none;
+        display: block;
+        cursor: pointer;
+
+        width: 8px;
+        height: 8px;
+
+        border-radius: 999px;
+        background: #d4d4d4;
+
+        transition:
+            width .35s ease,
+            background-color .35s ease;
+    }
+
+    .carousel-dots .dot.is-active {
+        width: 24px;
+        background: var(--primary-color);
+        box-shadow: 0 0 0 4px rgba(9, 46, 110, .08);
+    }
+
+    @media (hover:hover) {
+        .brand-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .brands-wrapper,
+        .brand-card,
+        .carousel-dots .dot {
+            transition: none;
+        }
+    }
+}
