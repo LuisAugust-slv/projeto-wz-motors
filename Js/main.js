@@ -1,11 +1,11 @@
-import { initHeader } from "./Modules/header.js";
-import { initHome } from "./Modules/home.js";
-import { initBenefits } from "./Modules/benefits.js";
-import { initBrands } from "./Modules/brands.js";
-import { initVehicles } from "./Modules/vehicles.js";
-import { initOn } from "./Modules/on.js";
-import { initTestimonials } from "./Modules/testimonials.js";
-import { initFooter } from "./Modules/footer.js";
+import { initHeader } from "./modules/header.js";
+import { initHome } from "./modules/home.js";
+import { initBenefits } from "./modules/benefits.js";
+import { initBrands } from "./modules/brands.js";
+import { initVehicles } from "./modules/vehicles.js";
+import { initOn } from "./modules/on.js";
+import { initTestimonials } from "./modules/testimonials.js";
+import { initFooter } from "./modules/footer.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     try {
