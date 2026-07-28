@@ -1,4 +1,4 @@
-import { vehicles } from "../Data/vehicles.js";
+import { vehicles } from "../data/vehicles.js";
 import { isMobile } from "../utils/viewport.js";
 
 export function initVehicles() {
